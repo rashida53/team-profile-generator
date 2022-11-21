@@ -8,17 +8,16 @@ function generateHTML(employees) {
                     <meta http-equiv="X-UA-Compatible" content="IE=edge">
                     <meta name="viewport" content="width=device-width, initial-scale=1.0">
                     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-                    <link rel="stylesheet" href="/dist/styles.css">
+                    <link rel="stylesheet" href="../dist/styles.css">
                     <title>Template</title>
                 </head>
                 <body>
-                    <div class="jumbotron jumbotron-fluid" style="background-color: #497174;">
+                    <div class="jumbotron jumbotron-fluid heading">
                         <div class="container">
-                            <h1 style="text-align: center; color: aliceblue;">My team</h1>
+                            <h1>My team</h1>
                         </div>
                     </div>
-                     <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center"
-        style="padding-top: 4%; padding-left: 15%; padding-right: 15%;">
+                     <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center cards-class">
                         ${cards}
                     </div>
                 </body>
@@ -28,8 +27,8 @@ function generateHTML(employees) {
 
 generateCard = (employee) => {
     return ` <div class="col">
-                <div class="card" style="margin-bottom: 20px;">
-                    <header style="background-color: #A10035; padding: 3%; color: white; text-align: center;">${employee.getName()} <br>
+                <div class="card emplopyee-card">
+                    <header class="card-headers">${employee.getName()} <br>
             ${employee.getRole()}</header>
                     <div class="card-body">
                         <ul class="list-group">

@@ -1,7 +1,25 @@
-.blueviolet {
-    background-color: blueviolet;
+h1 {
+    text-align: center;
+    color: aliceblue;
 }
 
-h1 {
+.heading {
+    background-color: #497174;
+}
+
+.cards-class {
+    padding-top: 4%;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.employee-card {
+    margin-bottom: 20px;
+}
+
+.card-headers {
+    background-color: #A10035;
+    padding: 3%;
+    color: white;
     text-align: center;
 }
