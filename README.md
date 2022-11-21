@@ -14,6 +14,13 @@
 - [License](#license)
 - [Questions](#questions)
 
+
+## You can watch the walkthrough video [here](https://drive.google.com/file/d/1iKR0GWsU8ANKKIXYV9Hms-07h1eru2bG/view)
+
+### The following image shows the web application's appearance and functionality:
+
+![screenshot](https://github.com/rashida53/team-profile-generator/blob/main/team-profile-generator.png?raw=true)
+
 ## [**Installation**](#table-of-contents)
 
 To install this aplication on your device, please follow these instructions:
