@@ -28,12 +28,13 @@ describe('generateHTMl', () => {
             expect(generateCard(obj)).toEqual(`<div class="col">
                 <div class="card employee-card">
                     <header class="card-headers">Hamza <br>
-            Manager</header>
+                        Manager
+                    </header>
                     <div class="card-body">
                         <ul class="list-group">
                             <li class="list-group-item">ID: 1</li>
                             <li class="list-group-item">Email: <a href="mailto:hsk">hsk</a></li>
-                <li class="list-group-item">Office Number: 20 </li>
+                            <li class="list-group-item">Office Number: 20 </li>
                         </ul>
                     </div>
                 </div>
