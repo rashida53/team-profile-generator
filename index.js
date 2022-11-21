@@ -23,15 +23,24 @@ const generalQuestions = [
     }
 ]
 
-
+//Initial function when you run node index.js
 function startup() {
     inquirer.prompt(generalQuestions).then(managerData => {
         createManager(managerData);
     })
 }
 
+//Array which will contain employee objects
 const employeeList = []
 
+const menu = {
+    type: 'list',
+    message: 'Please select from the following:',
+    name: 'choice',
+    choices: ['Add Engineer', 'Add Intern', 'Finish building team']
+}
+
+//Creates manager object and adds to employeeList array
 createManager = (managerData) => {
     var managerQuestion = {
         type: 'input',
@@ -51,13 +60,7 @@ createManager = (managerData) => {
     })
 }
 
-const menu = {
-    type: 'list',
-    message: 'Enter your choice:',
-    name: 'choice',
-    choices: ['Add Engineer', 'Add Intern', 'Finish building team']
-}
-
+//Creates engineer object and adds to employeeList array
 createEngineer = (engineerData) => {
     const engineerQuestion = {
         type: 'input',
@@ -78,6 +81,7 @@ createEngineer = (engineerData) => {
 
 }
 
+//Creates intern object and adds to employeeList array
 createIntern = (internData) => {
     const internQuestion = {
         type: 'input',
@@ -103,7 +107,7 @@ function writeToFile(fileName, data) {
     );
 }
 
-
+//Displays menu to add engineer/intern/finish building team, passes data to engineer and intern functions to create their objects
 function displayMenu() {
     inquirer.prompt(menu).then(response => {
         switch (response.choice) {

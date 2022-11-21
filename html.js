@@ -1,4 +1,5 @@
-function generateHTML(employees) {
+//Takes in the employeeList array which contains objects of manager, engineer and interns and geenrates html for index.html 
+generateHTML = (employees) => {
     var cards = generateEmployeeCards(employees)
     var html =
         `<!DOCTYPE html>
@@ -25,6 +26,7 @@ function generateHTML(employees) {
     return html;
 }
 
+//Creates individual cards for each object of manager, engineer and intern
 generateCard = (employee) => {
     return ` <div class="col">
                 <div class="card emplopyee-card">
@@ -41,6 +43,7 @@ generateCard = (employee) => {
              </div>`
 }
 
+//Function to print questions which are not common for the employees
 getSpecialField = (employee) => {
     switch (employee.getRole()) {
         case 'Manager':
@@ -52,6 +55,7 @@ getSpecialField = (employee) => {
     }
 }
 
+//Gets the employeeList array and loops through the objects to pass each one to generateCard
 generateEmployeeCards = (data) => {
     var allCards = "";
     for (var i = 0; i < data.length; i++) {
