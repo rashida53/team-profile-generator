@@ -12,12 +12,13 @@ function generateHTML(employees) {
                     <title>Template</title>
                 </head>
                 <body>
-                    <div class="jumbotron jumbotron-fluid" style="background-color: #94B49F;">
+                    <div class="jumbotron jumbotron-fluid" style="background-color: #497174;">
                         <div class="container">
                             <h1 style="text-align: center; color: aliceblue;">My team</h1>
                         </div>
                     </div>
-                    <div class="card-columns" style="padding: 5%;">
+                     <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-center"
+        style="padding-top: 4%; padding-left: 15%; padding-right: 15%;">
                         ${cards}
                     </div>
                 </body>
@@ -26,18 +27,19 @@ function generateHTML(employees) {
 }
 
 generateCard = (employee) => {
-    return `<div class="card">
-        <header style="background-color: #A10035; padding: 3%; color: white; text-align: center;">${employee.getName()} <br>
+    return ` <div class="col">
+                <div class="card" style="margin-bottom: 20px;">
+                    <header style="background-color: #A10035; padding: 3%; color: white; text-align: center;">${employee.getName()} <br>
             ${employee.getRole()}</header>
-        <div class="card-body">
-            <ul class="list-group">
-                <li class="list-group-item">ID: ${employee.getId()}
-                </li>
-                <li class="list-group-item">Email: <a href="mailto:${employee.getEmail()}">${employee.getEmail()}</a></li>
+                    <div class="card-body">
+                        <ul class="list-group">
+                            <li class="list-group-item">ID: ${employee.getId()}</li>
+                            <li class="list-group-item">Email: <a href="mailto:${employee.getEmail()}">${employee.getEmail()}</a></li>
                 ${getSpecialField(employee)}
-            </ul>
-        </div>
-    </div>`
+                        </ul>
+                    </div>
+                </div>
+             </div>`
 }
 
 getSpecialField = (employee) => {
