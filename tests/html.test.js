@@ -25,18 +25,19 @@ describe('generateHTMl', () => {
         it('should dynamically create card for the object that is passed in the function', () => {
             const obj = new Manager('Hamza', 1, 'hsk', 20);
 
-            expect(generateCard(obj)).toEqual(`<div class="card">
-        <header style="background-color: #A10035; padding: 3%; color: white; text-align: center;">Hamza <br>
+            expect(generateCard(obj)).toEqual(`<div class="col">
+                <div class="card employee-card">
+                    <header class="card-headers">Hamza <br>
             Manager</header>
-        <div class="card-body">
-            <ul class="list-group">
-                <li class="list-group-item">ID: 1
-                </li>
-                <li class="list-group-item">Email: <a href="mailto:hsk">hsk</a></li>
+                    <div class="card-body">
+                        <ul class="list-group">
+                            <li class="list-group-item">ID: 1</li>
+                            <li class="list-group-item">Email: <a href="mailto:hsk">hsk</a></li>
                 <li class="list-group-item">Office Number: 20 </li>
-            </ul>
-        </div>
-    </div>`)
+                        </ul>
+                    </div>
+                </div>
+             </div>`)
         })
     })
 })

@@ -107,7 +107,7 @@ function writeToFile(fileName, data) {
     );
 }
 
-//Displays menu to add engineer/intern/finish building team, passes data to engineer and intern functions to create their objects
+//Displays menu to add engineer/intern/finish building team, passes data to engineer and intern functions to create their objectss
 function displayMenu() {
     inquirer.prompt(menu).then(response => {
         switch (response.choice) {
@@ -122,7 +122,6 @@ function displayMenu() {
                 });
                 break;
             case 'Finish building team':
-                console.log(employeeList);
                 writeToFile('index.html', generateHTML(employeeList));
                 return;
         }

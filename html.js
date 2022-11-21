@@ -9,7 +9,7 @@ generateHTML = (employees) => {
                     <meta http-equiv="X-UA-Compatible" content="IE=edge">
                     <meta name="viewport" content="width=device-width, initial-scale=1.0">
                     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-                    <link rel="stylesheet" href="../dist/styles.css">
+                    <link rel="stylesheet" href="./assets/styles.css">
                     <title>Template</title>
                 </head>
                 <body>
@@ -28,22 +28,23 @@ generateHTML = (employees) => {
 
 //Creates individual cards for each object of manager, engineer and intern
 generateCard = (employee) => {
-    return ` <div class="col">
-                <div class="card emplopyee-card">
+    return `<div class="col">
+                <div class="card employee-card">
                     <header class="card-headers">${employee.getName()} <br>
-            ${employee.getRole()}</header>
+                        ${employee.getRole()}
+                    </header>
                     <div class="card-body">
                         <ul class="list-group">
                             <li class="list-group-item">ID: ${employee.getId()}</li>
                             <li class="list-group-item">Email: <a href="mailto:${employee.getEmail()}">${employee.getEmail()}</a></li>
-                ${getSpecialField(employee)}
+                            ${getSpecialField(employee)}
                         </ul>
                     </div>
                 </div>
              </div>`
 }
 
-//Function to print questions which are not common for the employees
+//Function to print information which are not common for the employees
 getSpecialField = (employee) => {
     switch (employee.getRole()) {
         case 'Manager':
